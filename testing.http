@@ -1,8 +1,8 @@
 
 ###
-GET http://127.0.0.1:8000/todoapp/todos
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NDA4NDQ4LCJpYXQiOjE3MTk0MDgxNDgsImp0aSI6IjNhOGEzODI1OWU3MTQzNjdiYmRlN2EzNWY5MjY5NWRhIiwidXNlcl9pZCI6NX0.Y8CZ2r5qQ8M6NNMOLIaznXXGLylQD1gi1E3l4jJE5Vk
-
+#GET http://127.0.0.1:8000/todoapp/todos/?priority=L
+GET http://127.0.0.1:8000/todoapp/todos/?title=C
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NDEyNTY1LCJpYXQiOjE3MTk0MDg5NjUsImp0aSI6IjZlMTM2NDA1YTU3YTQwYzFiYmIzMjA5ZjNlNzVjMmQ0IiwidXNlcl9pZCI6NX0.KNao6dG8k5RDA4UucESpXU0E8dh2iXRGrSbYRjmCyxs
 ###
 GET http://127.0.0.1:8000/todoapp/todos/download
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NDAyOTg2LCJpYXQiOjE3MTk0MDI2ODYsImp0aSI6IjNjZTIwMDlkNzA4MTRmODBiYjNhNGQ0MmQ3OWM0ZWYyIiwidXNlcl9pZCI6MX0.8vGI_XmkCkyPpuweMgbojs7YXORfZ6X6b60qcJEcelQ###

@@ -10,23 +10,34 @@ class TodoListCreateView(generics.ListCreateAPIView):
 
     def get_queryset(self):
         queryset = Todo.objects.filter(user=self.request.user)
-        # queryset = self.filter_by_priority(queryset)
-        # queryset = self.filter_by_title(queryset)
-        # queryset = self.filter_by_date_range(queryset)
+        queryset = self.filter_by_priority(queryset)
+        queryset = self.filter_by_title(queryset)
+        queryset = self.filter_by_date_range(queryset)
         return queryset
 
     def filter_by_priority(self, queryset):
+        priority = self.request.query_params.get('priority')
+        if priority:
+            queryset = queryset.filter(priority = priority)
         return queryset
 
     def filter_by_title(self, queryset):
+        title = self.request.query_params.get('title')
+        print(title)
+        if title:
+            print(queryset, ' -before')
+            queryset = queryset.filter(title__startswith=title)
+            print(queryset, ' -before')
         return queryset
 
     def filter_by_date_range(self, queryset):
+        date_range = self.request.query_params.get('date_range')
+        if date_range:
+            queryset = queryset.filter(date_range = date_range)
         return queryset
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
-
 
 
 class TodoDetailView(generics.RetrieveUpdateDestroyAPIView):
