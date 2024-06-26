@@ -6,10 +6,27 @@ from .serializers import TodoSerializer
 class TodoListCreateView(generics.ListCreateAPIView):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        queryset = Todo.objects.filter(user=self.request.user)
+        # queryset = self.filter_by_priority(queryset)
+        # queryset = self.filter_by_title(queryset)
+        # queryset = self.filter_by_date_range(queryset)
+        return queryset
+
+    def filter_by_priority(self, queryset):
+        return queryset
+
+    def filter_by_title(self, queryset):
+        return queryset
+
+    def filter_by_date_range(self, queryset):
+        return queryset
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
+
 
 
 class TodoDetailView(generics.RetrieveUpdateDestroyAPIView):
