@@ -1,14 +1,19 @@
-### GET request to example server
-GET https://examples.http-client.intellij.net/get
-    ?generated-in=PyCharm
-
-###
-
 
 ###
 GET http://127.0.0.1:8000/todoapp/todos
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NDAyMDM4LCJpYXQiOjE3MTk0MDE3MzgsImp0aSI6ImZiYmJhOGQ5NWUwZjQ2MWJiMjhiZjVkZmJlMGY2YjkwIiwidXNlcl9pZCI6MX0.gntruYTxp0iEzWO25mIroE4E2aMhtGOyd5uOECvp2Jk
 ###
+
+
+
+###
+GET http://127.0.0.1:8000/todoapp/todos/download
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NDAyOTg2LCJpYXQiOjE3MTk0MDI2ODYsImp0aSI6IjNjZTIwMDlkNzA4MTRmODBiYjNhNGQ0MmQ3OWM0ZWYyIiwidXNlcl9pZCI6MX0.8vGI_XmkCkyPpuweMgbojs7YXORfZ6X6b60qcJEcelQ###
+###
+
+
+
+
 
 ###
 POST http://127.0.0.1:8000/todoapp/api/token/
@@ -18,5 +23,4 @@ Content-Type: application/json
   "username": "admin",
   "password": "admin"
 }
-
 ###

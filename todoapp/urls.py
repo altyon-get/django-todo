@@ -13,4 +13,5 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('todos/', TodoListCreateView.as_view(), name='todo-list-create'),
     path('todos/<int:pk>/', TodoDetailView.as_view(), name='todo-detail'),
+    path('todos/download/', TodoDownloadView.as_view(), name='todo-download'),
 ]
